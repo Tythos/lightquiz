@@ -1,6 +1,8 @@
 var questions = {};
 var currentQuestionIndex = 0;
 var correctIndex = 0;
+var score = 0;
+var fails = 0;
 
 function loadQuiz(data)
 {
@@ -32,7 +34,7 @@ function loadQuestion()
 {
 	document.getElementById("question").innerHTML = questions[currentQuestionIndex].q;
 	options = ["first", "second", "third", "fourth"];
-	correctIndex = randomNumBetween(0, 3);
+	correctIndex = randomNumBetween(0, options.length);
 
 	for (var i = 0; i < options.length; i++) {
 		if (i == correctIndex) {
@@ -46,12 +48,21 @@ function loadQuestion()
 function answer(num)
 {
 	if (num == correctIndex) {
-		currentQuestionIndex++;
+		currentQuestionIndex = randomNumBetween(0, questions.length);
+		score += 1;
+		document.getElementById("score").innerHTML = "" + score;
 		loadQuestion();
+		document.body.style.backgroundColor = "green";
 	}
 	else {
-		alert("Failed!");
+		fails += 1;
+		document.getElementById("fails").innerHTML = "" + fails;
+		document.body.style.backgroundColor = "red";
 	}
+
+	setTimeout(function () {
+		document.body.style.backgroundColor = "white";
+	}, 300);
 }
 
 window.onload = function ()

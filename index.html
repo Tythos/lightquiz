@@ -6,15 +6,57 @@
 			body {
 				font-family: Arial;
 				font-size: 5vh;
+				text-align: center;
+				transition: 1s;
+			}
+
+			header {
+				position: sticky;
+				top: 0;
+				background-color: white;
+				padding: 3vh;
+			}
+
+			#score {
+				color: green;
+			}
+
+			#fails {
+				color: red;
 			}
 
 			button {
 				font-size: 5vh;
+				width: 80vw;
+				padding: 50px;
+			}
+
+			#first {
+				background-color: dodgerblue;
+				color: white;
+			}
+
+			#second {
+				background-color: slateblue;
+				color: white;
+			}
+
+			#third {
+				background-color: mediumseagreen;
+				color: white;
+			}
+
+			#fourth {
+				background-color: maroon;
+				color: white;
 			}
 		</style>
 	</head>
 	<body>
-		Current Question: <div id="question"></div><br>
+		<header id="main-header">
+			Score: <span id="score">0</span>&nbsp; Fails: <span id="fails">0</span><br>
+			<div id="question"></div>
+		</header>
 		<button onclick="answer(0)" id="first"></button><br>
 		<button onclick="answer(1)" id="second"></button><br>
 		<button onclick="answer(2)" id="third"></button><br>
