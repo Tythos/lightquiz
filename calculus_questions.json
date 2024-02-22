@@ -2,30 +2,30 @@
 	"questions": [
 		{
 			"q": "The least upper bound theorem",
-			"a": "Let ∅ != A ⊆ R. Suppose that A is bounded from above. Then there exists a unique s s.t. s is a least upper bound of A"
+			"a": "Let ∅ != A ⊆ R. Suppose that A is bounded from above.<br>Then there exists a unique s s.t. s is a least upper bound of A"
 		},
 		{
 			"q": "The epsilon prop of the least upper bound",
 			"a": "Let ∅ != A ⊆ R. Suppose that A is bounded from above and let s be an upper bound of A. Then s = sup(A) iff ∀ ε > 0 ∃ a ∈ A s.t. a > s - ε"
 		},
 		{
-			"q": "The Archimedean prop",
+			"q": "The Archimedean prop 📐",
 			"a": "∀ M ∈ R ∃ n ∈ N s.t. n > M"
 		},
 		{
-			"q": "The inverse Archimedean prop",
+			"q": "The inverse Archimedean prop 📏",
 			"a": "∀ ε > 0 ∃ n ∈ N s.t. 1/n < ε"
 		},
 		{
-			"q": "The maximum theorem",
+			"q": "The maximum theorem 🗼",
 			"a": "Let ∅ != A ⊆ Z. Suppose that A is bounded from above. Then A has a maximal value."
 		},
 		{
-			"q": "The density of rationals",
+			"q": "The density of rationals 🔢",
 			"a": "Q is dense ∈ R"
 		},
 		{
-			"q": "The density of irrationals",
+			"q": "The density of irrationals 🔢",
 			"a": "R \\ Q is dense ∈ R"
 		},
 		{
@@ -33,15 +33,27 @@
 			"a": "Let x<sub>0</sub> and let f be a function that is defined on a deleted neighborhood of x<sub>0</sub>. Let L1, L2 and suppose that L1, L2 are two limits of f at x<sub>0</sub>. Then L1 = L2."
 		},
 		{
-			"q": "Monotonicity of limits",
+			"q": "Monotonicity of limits 🎢",
 			"a": "Let x<sub>0</sub> and let f,g be two functions defined on a deleted neighborhood of x<sub>0</sub>. Let L1, L2 and suppose that L1 = lim<sub>x→x<sub>0</sub></sub> f(x) and that L2 = lim<sub>x→x<sub>0</sub></sub> g(x). Suppose also that f(x) <= g(x) for every x in that deleted neighborhood. Then L1 <= L2"
 		},
 		{
-			"q": "The squeeze rule",
+			"q": "The squeeze rule 🥪",
 			"a": "Let x<sub>0</sub> and let f,g,h be three functions that are defined on a deleted neighborhood of x<sub>0</sub>. Let L and suppose that:<br>1. h(x) <= f(x) <= g(x) for every x in that deleted neighborhood<br>2. L = lim from x → x<sub>0</sub> h(x) = lim from x → x<sub>0</sub> g(x)<br><br>Then lim<sub>x→x<sub>0</sub></sub> f(x) = L"
 		},
 		{
-			"q": "Intermediate value theorem",
+			"q": "Bounded × Vanishing 📊",
+			"a": "Let x<sub>0</sub> ∈ R and let f, g be two functions that are defined on a deleted neighborhood of x<sub>0</sub>. Suppose that:<br>1. f is bounded in the deleted neighborhood.<br>2. lim <sub>x → x<sub>0</sub></sub> g(x) = 0.<br>Then lim <sub>x → x<sub>0</sub></sub> f(x) · g(x) = 0."
+		},
+		{
+			"q": "1 ÷ 0<sup>+</sup> 🧮",
+			"a": "Let x<sub>0</sub> ∈ R and let f be a function that is defined on a deleted neighborhood of x<sub>0</sub>. Suppose that:<br>1. lim <sub>x → x<sub>0</sub></sub> f(x) = 0.<br>2. f(x) > 0 for every x in the deleted neighborhood.  <br>Then lim <sub>x → x<sub>0</sub></sub> 1 ÷ f(x) = ∞."
+		},
+		{
+			"q": "1 ÷ ∞ 🧮",
+			"a": "Let x<sub>0</sub> ∈ R and let f be a function that is defined on a deleted neighborhood of x<sub>0</sub>. Suppose that lim <sub>x → x<sub>0</sub></sub> f(x) = ∞. Then lim <sub>x → x<sub>0</sub></sub> 1÷ f(x) = 0."
+		},
+		{
+			"q": "Intermediate value theorem 📈",
 			"a": "Let a,b s.t. a < b and let f be a function that is defined at least on [a,b]. Suppose that f is continuous on [a,b]. Suppose also that f(a) * f(b) < 0. Then there exists a point a < c < b s.t. f(c) = 0"
 		}
 	]
