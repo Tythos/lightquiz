@@ -31,6 +31,18 @@
 		{
 			"q": "The uniqueness of limits",
 			"a": "Let x0 and let f be a function that is defined on a deleted neighborhood of x0. Let L1, L2 and suppose that L1, L2 are two limits of f at x0. Then L1 = L2."
+		},
+		{
+			"q": "Monotonicity of limits",
+			"a": "Let x0 and let f,g be two functions defined on a deleted neighborhood of x0. Let L1, L2 and suppose that L1 = lim from x->x0 f(x) and that L2 = lim from x->x0 g(x). Suppose also that f(x) <= g(x) for every x in that deleted neighborhood. Then L1 <= L2"
+		},
+		{
+			"q": "The squeeze rule",
+			"a": "Let x0 and let f,g,h be three functions that are defined on a deleted neighborhood of x0. Let L and suppose that:<br>1. h(x) <= f(x) <= g(x) for every x in that deleted neighborhood<br>2. L = lim from x -> x0 h(x) = lim from x -> x0 g(x)<br><br>Then lim from x -> x0 f(x) = L"
+		},
+		{
+			"q": "Intermediate value theorem",
+			"a": "Let a,b s.t. a < b and let f be a function that is defined at least on [a,b]. Suppose that f is continuous on [a,b]. Suppose also that f(a) * f(b) < 0. Then there exists a point a < c < b s.t. f(c) = 0"
 		}
 	]
 }
