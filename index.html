@@ -5,7 +5,7 @@
 		<style>
 			body {
 				font-family: Arial;
-				font-size: 5vh;
+				font-size: 4vh;
 				text-align: center;
 				transition: 1s;
 			}
@@ -26,9 +26,11 @@
 			}
 
 			button {
-				font-size: 5vh;
+				font-size: 3vh;
 				width: 80vw;
 				padding: 50px;
+				border-radius: 10px;
+				border-width: 1px;
 			}
 
 			#first {
@@ -50,16 +52,40 @@
 				background-color: maroon;
 				color: white;
 			}
+
+			#proofs-btn {
+				font-size: 2.5vh;
+				width: 40vw;
+				padding: 20px;
+				background-color: red;
+				color: white;
+			}
+
+			#theorems-btn {
+				font-size: 2.5vh;
+				width: 40vw;
+				padding: 20px;
+				background-color: green;
+				color: white;
+			}
 		</style>
 	</head>
 	<body>
-		<header id="main-header">
-			Score: <span id="score">0</span>&nbsp; Fails: <span id="fails">0</span><br>
-			<div id="question"></div>
-		</header>
-		<button onclick="answer(0)" id="first"></button><br>
-		<button onclick="answer(1)" id="second"></button><br>
-		<button onclick="answer(2)" id="third"></button><br>
-		<button onclick="answer(3)" id="fourth"></button><br>
+		<button id="proofs-btn" onclick="practice('proof')">Practice Proofs</button>
+		<button id="theorems-btn" onclick="practice('theorem')">Practice Theorems</button>
+		<div id="welcome">
+			<h1>Welcome to LightQuiz!</h1>
+			Choose a quiz type above to begin
+		</div>
+		<span id="main" style="display: none;">
+			<header id="main-header">
+				Score: <span id="score">0</span>&nbsp; Fails: <span id="fails">0</span><br>
+				<div id="question"></div>
+			</header>
+			<button onclick="answer(0)" id="first"></button><br>
+			<button onclick="answer(1)" id="second"></button><br>
+			<button onclick="answer(2)" id="third"></button><br>
+			<button onclick="answer(3)" id="fourth"></button><br>
+		</span>
 	</body>
 </html>

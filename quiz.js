@@ -1,14 +1,14 @@
+var originalQuestions = {};
 var questions = {};
 var currentQuestionIndex = 0;
 var correctIndex = 0;
 var score = 0;
 var fails = 0;
+var mode = "";
 
 function loadQuiz(data)
 {
-	questions = JSON.parse(data).questions;
-	currentQuestionIndex = 0;
-	loadQuestion();
+	originalQuestions = JSON.parse(data).questions;
 }
 
 function randomNumBetween(start, end)
@@ -43,6 +43,26 @@ function loadQuestion()
 			document.getElementById(options[i]).innerHTML = getRandomAnswer();
 		}
 	}
+}
+
+function practice(what)
+{
+	document.getElementById("welcome").style.display = "none";
+	document.getElementById("main").style.display = "block";
+	score = 0;
+	fails = 0;
+	mode = what;
+	currentQuestionIndex = 0;
+
+	questions = originalQuestions.filter((q) => {
+		if (q.type == undefined && mode == "theorem") {
+			return true;
+		}
+
+		return q.type === mode;
+	});
+
+	loadQuestion();
 }
 
 function answer(num)

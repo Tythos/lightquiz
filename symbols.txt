@@ -1,0 +1,7 @@
+Empty set - ∅
+Element of - ∈
+Subset of - ⊆
+For all - ∀
+Exists - ∃
+Epsilon - ε
+Arrow - → 

@@ -55,6 +55,16 @@
 		{
 			"q": "Intermediate value theorem 📈",
 			"a": "Let a,b s.t. a < b and let f be a function that is defined at least on [a,b]. Suppose that f is continuous on [a,b]. Suppose also that f(a) * f(b) < 0. Then there exists a point a < c < b s.t. f(c) = 0"
+		},
+		{
+			"type": "proof",
+			"q": "The least upper bound theorem",
+			"a": "Consider the set B = { M ∈ R : M is an upper bound of A }<br>Note that B ⊆ R and as A is bounded from above, then B != ∅. Also note that ∀a ∈ A, ∀M∈B we have a <= M. (M is an upper bound).<br>Therefore, A <= B and as A,B!=∅, then by the Axiom of Completeness, then ∃s∈R s.t. ∀a∈A, ∀M∈B, a <=<sup>*</sup> S <=<sup>**</sup> M<br><br>By * S is an upper bound of A.<br>By ** S is minimal among all upper bounds of A.<br>Therefore, S is a least upper bound of A. As S is a minimal upper bound, then S = min B, and therefore, by the uniqueness of minimum (Theorem 5, lecture 2), S is unique. 🙂"
+		},
+		{
+			"type": "proof",
+			"q": "The epsilon prop of the least upper bound",
+			"a": ["=>: Suppose that S=sup(A). Let ε > 0. As S=sup(A), then S-ε is not an upper bound of A, and therefore, ∃a<sub>1</sub>∈A s.t. (*) a<sub>1</sub> > S-ε. Choose a=a<sub>1</sub>.<br>Then (*) holds for a, and therefore, we are done.", "<=: Suppose that the ε property holds<br>(i) S is an upper bound of A, as is given by the assumption<br>(ii) Let M ∈ R be an upper bound of A. ATC that M < S. Choose ε=S-M>0<br>By the ε-property ∃a<sub>1</sub>∈A s.t. a<sub>1</sub> > S - ε = M ⬅ (ε = S-M)<br>Contradiction to the assumption that M is an upper bound. 🙂"]
 		}
 	]
 }
