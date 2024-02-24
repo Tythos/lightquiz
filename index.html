@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>LightQuiz</title>
 		<script src="quiz.js"></script>
 		<style>
@@ -7,7 +8,6 @@
 				font-family: Arial;
 				font-size: 4vh;
 				text-align: center;
-				transition: 1s;
 			}
 
 			header {
@@ -57,7 +57,7 @@
 				font-size: 2.5vh;
 				width: 40vw;
 				padding: 20px;
-				background-color: red;
+				background-color: dodgerblue;
 				color: white;
 			}
 
@@ -65,17 +65,32 @@
 				font-size: 2.5vh;
 				width: 40vw;
 				padding: 20px;
-				background-color: green;
+				background-color: yellow;
+				color: black;
+			}
+
+			#splash {
+				background-color: white;
+				transition: 1s;
+				position: fixed;
+				top:0;
+				width: 100vw;
+				height: 100vh;
+				z-index: 1000;
 				color: white;
+				padding-top: 20vh;
+				opacity: 0.9;
 			}
 		</style>
 	</head>
 	<body>
-		<button id="proofs-btn" onclick="practice('proof')">Practice Proofs</button>
-		<button id="theorems-btn" onclick="practice('theorem')">Practice Theorems</button>
+		<div id="splash" style="visibility:hidden;"></div>
+
+		<button id="proofs-btn" onclick="practice('proof')">Proofs</button>
+		<button id="theorems-btn" onclick="practice('theorem')">Theorems</button>
 		<div id="welcome">
 			<h1>Welcome to LightQuiz!</h1>
-			Choose a quiz type above to begin
+			Choose a quiz type above to begin 🚀
 		</div>
 		<span id="main" style="display: none;">
 			<header id="main-header">

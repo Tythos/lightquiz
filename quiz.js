@@ -1,6 +1,7 @@
 var originalQuestions = {};
 var questions = {};
 var currentQuestionIndex = 0;
+var partInQuestion = 0;
 var correctIndex = 0;
 var score = 0;
 var fails = 0;
@@ -51,6 +52,7 @@ function practice(what)
 	document.getElementById("main").style.display = "block";
 	score = 0;
 	fails = 0;
+	renderScoreAndFails();
 	mode = what;
 	currentQuestionIndex = 0;
 
@@ -65,24 +67,36 @@ function practice(what)
 	loadQuestion();
 }
 
+function renderScoreAndFails()
+{
+	document.getElementById("score").innerHTML = "" + score;
+	document.getElementById("fails").innerHTML = "" + fails;
+}
+
 function answer(num)
 {
+	document.getElementById("splash").style.visibility = "visible";
+	document.getElementById("splash").style.opacity = "0.9";
+
 	if (num == correctIndex) {
 		currentQuestionIndex = randomNumBetween(0, questions.length);
 		score += 1;
-		document.getElementById("score").innerHTML = "" + score;
 		loadQuestion();
-		document.body.style.backgroundColor = "green";
+		document.getElementById("splash").style.backgroundColor = "green";
+		document.getElementById("splash").innerHTML = "Correct! 🙂";
 	}
 	else {
 		fails += 1;
-		document.getElementById("fails").innerHTML = "" + fails;
-		document.body.style.backgroundColor = "red";
+		document.getElementById("splash").style.backgroundColor = "red";
+		document.getElementById("splash").innerHTML = "Incorrect 😭";
 	}
 
+	renderScoreAndFails();
+
 	setTimeout(function () {
-		document.body.style.backgroundColor = "white";
-	}, 300);
+		document.getElementById("splash").style.opacity = "0";
+		document.getElementById("splash").style.visibility = "hidden";
+	}, 500);
 }
 
 window.onload = function ()
