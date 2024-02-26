@@ -5,3 +5,9 @@ For all - ∀
 Exists - ∃
 Epsilon - ε
 Arrow - → 
+A roof - â
+Floor left - ⌊
+Floor right - ⌋
+Ceil left - ⌈
+Ceil right - ⌉
+Sqrt - √

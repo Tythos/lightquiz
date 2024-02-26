@@ -58,13 +58,123 @@
 		},
 		{
 			"type": "proof",
-			"q": "The least upper bound theorem",
-			"a": "Consider the set B = { M ∈ R : M is an upper bound of A }<br>Note that B ⊆ R and as A is bounded from above, then B != ∅. Also note that ∀a ∈ A, ∀M∈B we have a <= M. (M is an upper bound).<br>Therefore, A <= B and as A,B!=∅, then by the Axiom of Completeness, then ∃s∈R s.t. ∀a∈A, ∀M∈B, a <=<sup>*</sup> S <=<sup>**</sup> M<br><br>By * S is an upper bound of A.<br>By ** S is minimal among all upper bounds of A.<br>Therefore, S is a least upper bound of A. As S is a minimal upper bound, then S = min B, and therefore, by the uniqueness of minimum (Theorem 5, lecture 2), S is unique. 🙂"
+			"id": 1,
+			"parts": 2,
+			"q": "The least upper-bound theorem"
 		},
 		{
 			"type": "proof",
-			"q": "The epsilon prop of the least upper bound",
-			"a": ["=>: Suppose that S=sup(A). Let ε > 0. As S=sup(A), then S-ε is not an upper bound of A, and therefore, ∃a<sub>1</sub>∈A s.t. (*) a<sub>1</sub> > S-ε. Choose a=a<sub>1</sub>.<br>Then (*) holds for a, and therefore, we are done.", "<=: Suppose that the ε property holds<br>(i) S is an upper bound of A, as is given by the assumption<br>(ii) Let M ∈ R be an upper bound of A. ATC that M < S. Choose ε=S-M>0<br>By the ε-property ∃a<sub>1</sub>∈A s.t. a<sub>1</sub> > S - ε = M ⬅ (ε = S-M)<br>Contradiction to the assumption that M is an upper bound. 🙂"]
+			"id": 2,
+			"parts": 2,
+			"q": "The epsilon prop of the least upper bound"
+		},
+		{
+			"type": "proof",
+			"id": 3,
+			"parts": 2,
+			"q": "The Archimedean Prop"
+		},
+		{
+			"type": "proof",
+			"id": 4,
+			"parts": 1,
+			"q": "The inverse Archimedean Prop"
+		},
+		{
+			"type": "proof",
+			"id": 5,
+			"parts": 2,
+			"q": "The maximum theorem 🗼"
+		},
+		{
+			"type": "proof",
+			"id": 6,
+			"parts": 3,
+			"q": "The density of rationals 🔢"
+		},
+		{
+			"type": "proof",
+			"id": 7,
+			"parts": 1,
+			"q": "The density of irrationals 🔢"
+		},
+		{
+			"type": "proof",
+			"id": 8,
+			"parts": 3,
+			"q": "The uniqueness of limits"
+		},
+		{
+			"type": "proof",
+			"id": 9,
+			"parts": 4,
+			"q": "The Algebra of Limits, *"
+		},
+		{
+			"type": "proof",
+			"id": 10,
+			"parts": 5,
+			"q": "The Algebra of Limits, /"
+		},
+		{
+			"type": "proof",
+			"id": 11,
+			"parts": 2,
+			"q": "The Algebra of Limits, absolute value"
+		},
+		{
+			"type": "proof",
+			"id": 12,
+			"parts": 3,
+			"q": "Monotonicity of Limits"
+		},
+		{
+			"type": "proof",
+			"id": 13,
+			"parts": 3,
+			"q": "The Algebra of Limits, Square Root"
+		},
+		{
+			"type": "proof",
+			"id": 14,
+			"parts": 3,
+			"q": "The Squeeze Rule 🥪"
+		},
+		{
+			"type": "proof",
+			"id": 15,
+			"parts": 1,
+			"q": "lim<sub>x->x0</sub>f(x) = 0 if and only if lim<sub>x->x0</sub>|f(x)| = 0"
+		},
+		{
+			"type": "proof",
+			"id": 16,
+			"parts": 2,
+			"q": "Bounded x Vanishing 📉"
+		},
+		{
+			"type": "proof",
+			"id": 17,
+			"parts": 1,
+			"q": "1 divided by 0<sup>+</sup>"
+		},
+		{
+			"type": "proof",
+			"id": 18,
+			"parts": 1,
+			"q": "1 divided by infinity ♾"
+		},
+		{
+			"type": "proof",
+			"id": 19,
+			"parts": 3,
+			"q": "Theorem 19 - Relation of limit of increasing and supremum"
+		},
+		{
+			"type": "proof",
+			"id": 21,
+			"parts": 5,
+			"q": "The intermediate value theorem"
 		}
 	]
 }

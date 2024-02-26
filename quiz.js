@@ -1,7 +1,7 @@
 var originalQuestions = {};
 var questions = {};
 var currentQuestionIndex = 0;
-var partInQuestion = 0;
+var partInQuestion = 1;
 var correctIndex = 0;
 var score = 0;
 var fails = 0;
@@ -28,6 +28,10 @@ function getRandomAnswer()
 		}
 	}
 
+	if (mode == "proof") {
+		return "<img src=\"images/" + questions[chosen].id + "-" + 1 + ".png\">";
+	}
+
 	return questions[chosen].a;
 }
 
@@ -39,7 +43,14 @@ function loadQuestion()
 
 	for (var i = 0; i < options.length; i++) {
 		if (i == correctIndex) {
-			document.getElementById(options[i]).innerHTML = questions[currentQuestionIndex].a;
+			var content = "";
+			if (mode == "proof") {
+				content = "<img src=\"images/" + questions[currentQuestionIndex].id + "-" + partInQuestion + ".png\">";
+			} else {
+				content = questions[currentQuestionIndex].a;
+			}
+
+			document.getElementById(options[i]).innerHTML = content;
 		} else {
 			document.getElementById(options[i]).innerHTML = getRandomAnswer();
 		}
@@ -48,8 +59,6 @@ function loadQuestion()
 
 function practice(what)
 {
-	document.getElementById("welcome").style.display = "none";
-	document.getElementById("main").style.display = "block";
 	score = 0;
 	fails = 0;
 	renderScoreAndFails();
@@ -79,8 +88,14 @@ function answer(num)
 	document.getElementById("splash").style.opacity = "0.9";
 
 	if (num == correctIndex) {
-		currentQuestionIndex = randomNumBetween(0, questions.length);
-		score += 1;
+		if (partInQuestion < questions[currentQuestionIndex].parts) {
+			partInQuestion++;
+		} else {
+			currentQuestionIndex = randomNumBetween(0, questions.length);
+			partInQuestion = 1;
+			score += 1;
+		}
+
 		loadQuestion();
 		document.getElementById("splash").style.backgroundColor = "green";
 		document.getElementById("splash").innerHTML = "Correct! 🙂";
@@ -96,7 +111,7 @@ function answer(num)
 	setTimeout(function () {
 		document.getElementById("splash").style.opacity = "0";
 		document.getElementById("splash").style.visibility = "hidden";
-	}, 500);
+	}, 700);
 }
 
 window.onload = function ()
@@ -105,6 +120,7 @@ window.onload = function ()
 	req.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			loadQuiz(req.responseText);
+			practice("proof");
 		}
 	};
 
