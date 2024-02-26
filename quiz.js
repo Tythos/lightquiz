@@ -80,6 +80,8 @@ function renderScoreAndFails()
 {
 	document.getElementById("score").innerHTML = "" + score;
 	document.getElementById("fails").innerHTML = "" + fails;
+	document.getElementById("tot").innerHTML = "" + (questions[currentQuestionIndex] ? questions[currentQuestionIndex].parts : "2");
+	document.getElementById("rem").innerHTML = "" + partInQuestion;
 }
 
 function answer(num)
