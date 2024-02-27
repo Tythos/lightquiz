@@ -37,7 +37,7 @@ function getRandomAnswer()
 
 function loadQuestion()
 {
-	document.getElementById("question").innerHTML = questions[currentQuestionIndex].q;
+	document.getElementById("question").innerHTML = "<img src=\"images/q" + questions[currentQuestionIndex].id + ".png\">";
 	options = ["first", "second", "third", "fourth"];
 	correctIndex = randomNumBetween(0, options.length);
 

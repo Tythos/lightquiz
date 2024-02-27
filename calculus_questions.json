@@ -172,6 +172,12 @@
 		},
 		{
 			"type": "proof",
+			"id": 20,
+			"parts": 3,
+			"q": "The intermediate value theorem"
+		},
+		{
+			"type": "proof",
 			"id": 21,
 			"parts": 5,
 			"q": "The intermediate value theorem"
