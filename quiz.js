@@ -63,7 +63,6 @@ function practice(what)
 	fails = 0;
 	renderScoreAndFails();
 	mode = what;
-	currentQuestionIndex = 0;
 
 	questions = originalQuestions.filter((q) => {
 		if (q.type == undefined && mode == "theorem") {
@@ -72,6 +71,8 @@ function practice(what)
 
 		return q.type === mode;
 	});
+
+	selectRandomQuestion();
 
 	loadQuestion();
 }
@@ -84,6 +85,11 @@ function renderScoreAndFails()
 	document.getElementById("rem").innerHTML = "" + partInQuestion;
 }
 
+function selectRandomQuestion()
+{
+	currentQuestionIndex = randomNumBetween(0, questions.length);
+}
+
 function answer(num)
 {
 	document.getElementById("splash").style.visibility = "visible";
@@ -93,7 +99,7 @@ function answer(num)
 		if (partInQuestion < questions[currentQuestionIndex].parts) {
 			partInQuestion++;
 		} else {
-			currentQuestionIndex = randomNumBetween(0, questions.length);
+			selectRandomQuestion();
 			partInQuestion = 1;
 			score += 1;
 		}
