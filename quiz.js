@@ -29,7 +29,7 @@ function getRandomAnswer()
 	}
 
 	if (mode == "proof") {
-		return "<img src=\"images/" + questions[chosen].id + "-" + 1 + ".png\">";
+		return "<img src=\"images/" + questions[chosen].id + "-" + randomNumBetween(1, questions[chosen].parts) + ".png\">";
 	}
 
 	return questions[chosen].a;
