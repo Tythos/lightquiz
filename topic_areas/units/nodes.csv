@@ -1,0 +1,13 @@
+id,name,unit,type,value
+P,Pressure,Pa,variable,
+V,Volume,m^3,variable,
+n,Number of moles,mol,variable,
+R,Gas constant,J/(mol*K),constant,8.314
+T,Temperature,K,variable,
+Q,Heat,J,variable,
+W,Work,J,variable,
+U,Internal Energy,J,variable,
+meters,Meters,m,unit,
+milliliters,Milliliters,mL,unit,
+SI_units,Base SI Units,,set,
+physical_constants,Physical Constaints,,set,

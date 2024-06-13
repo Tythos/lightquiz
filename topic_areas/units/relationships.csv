@@ -1,0 +1,6 @@
+id,type,equation,involves,set,to,from,factor,prefix,member,contextual_conditions
+ideal_gas_law,equation,PV = nRT,"P,V,n,R,T",,,,,,,
+first_law_thermo,equation,dU = Q - W,"U,Q,W",,,,,,,
+R_in_physical_constants,set_membership,R,,physical_constants,,,,,,
+meters_in_SI_units,set_membership,,,SI_units,,,,,meters,
+milliliters_to_liters,hierarchy,,,,liters,milliiliters,1.00E-03,milli,,
